@@ -85,7 +85,7 @@ data %>% filter(colour == 'gold' & xbox_price != 0) %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-7-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-7-1.png>
 
 This plot says not too much, lets plot price distribution by categories for 'normal' and 'special' players.
 
@@ -100,7 +100,7 @@ data %>% filter(colour == 'gold' & xbox_price != 0) %>%
   geom_histogram(aes(fill = position_group), bins = 50)
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-8-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-8-1.png>
 
 If we loof closer, We can see wide price disrtibution for forwards position. Some of them have price higher then 400000. We should analize who these players are and why they have so hight price. Other positions of 'normal' players \#have approximately the same distribution.
 
@@ -133,7 +133,7 @@ data %>% filter(colour == 'gold' & xbox_price != 0) %>%
   geom_histogram(aes(fill = position_group), bins = 50) 
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-10-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-10-1.png>
 
 We also can see that forwards have the highest price, but the other categories also have wide distribution and price rages.
 
@@ -155,7 +155,7 @@ labs(title = "Total number of different revision types",
 theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-11-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-11-1.png>
 
 For special cards total prise is increases but the mean price is decrease. This is because of increasing number of special cards/players.
 
@@ -177,7 +177,7 @@ data %>% filter(colour == 'gold' &
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-12-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-12-1.png>
 
 We cann't say for sure thre is or there is not some kind of dependency. We can check it during model building.
 
@@ -195,7 +195,7 @@ data %>% filter(colour == 'gold' & xbox_price != 0 & year_month != '2016-09') %>
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-13-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-13-1.png>
 
 Using of the general mean price is not the best idea because of daily price changing, but we can see some dependencies between those two variables, so we can try to use these feature in model building.
 
@@ -216,7 +216,7 @@ data %>% filter (colour == 'gold' & xbox_price != 0 & year_month != '2016-09' & 
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-14-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-14-1.png>
 
 We can see that forwards are the most expensive playeys for both categories. Also analyzing this plot we can see the price spike in the middle of January for all players positions. Let's take a look at top-5 most expensive leagues
 
@@ -254,7 +254,7 @@ data %>% filter(league == 'LaLiga Santander' | league == 'Legends' | league == '
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-16-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-16-1.png>
 
 If we do not pay attention to October (when the game has just started) we can see the biggest price spike in LaLiga Santander for special players. Other leagues have small spike of do not have it at all. What has happened in January in Laliga? We can see that in January were added few players with extremely hight price and revision == 'TOTY' (Team of the Year)
 
