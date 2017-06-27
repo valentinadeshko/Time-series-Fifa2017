@@ -2,11 +2,9 @@
 title: "Fifa visualization"
 output: github_document
 ---
-
+"FIFA_vis/VIS-"
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  fig.path = "FIFA_vis/VIS-"
-)
+knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "FIFA_vis/Fifa vis-")
 ```
 
 ```{r include=FALSE, cache=FALSE}
