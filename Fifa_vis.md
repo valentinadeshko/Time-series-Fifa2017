@@ -58,7 +58,7 @@ data %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-6-1.png" width="672" />
+<img src="FIFA_vis/Rplot1.png" width="672" />
 
 We can see that the gold cards are most expensive for both categories. That is why we will analize only gold card price behaviour.
 
