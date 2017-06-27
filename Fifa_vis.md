@@ -61,7 +61,7 @@ data %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="FIFA_vis/fig-unnamed-chunk-6-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Fifa_plots/fig-unnamed-chunk-6-1.png >
 
 We can see that the gold cards are most expensive in both categories. That is why we will analize only gold cards price behaviour.
 
