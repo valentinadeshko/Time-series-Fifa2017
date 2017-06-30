@@ -37,7 +37,7 @@ sum(player$xbox_price == 0)
 ggplot(player, aes(timestamp, xbox_price)) + geom_line(size = 1.0, color = 'blue') + xlab("Date")
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-5-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-5-1.png>
 
 ``` r
 #Lets plot weekly and monthly MA
@@ -54,7 +54,7 @@ ggplot() +
 ## Warning: Removed 30 rows containing missing values (geom_path).
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-6-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-6-1.png>
 
 ``` r
 #decompose on seasonal, trend and cycle components
@@ -64,7 +64,7 @@ deseasonal_cnt <- seasadj(decomp)
 plot(decomp)
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-7-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-7-1.png>
 
 We dont see any seasonal components.
 
@@ -85,7 +85,7 @@ We see that the series is stationary enough to do any kind of time series modell
 plot(diff(player$xbox_price), type = 'l')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-9-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-9-1.png>
 
 We can see that the data became less volatility. Lets use d = 1
 
@@ -95,14 +95,14 @@ Next step is to find the right parameters to be used in the ARIMA model. We alre
 Acf(player$xbox_price, main='')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-10-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-10-1.png>
 
 ``` r
 
 Pacf(player$xbox_price, main='')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-10-2.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-10-2.png>
 
 Still ACF looks not very good, lets differentiate it
 
@@ -113,13 +113,13 @@ Still ACF looks not very good, lets differentiate it
 Acf(diff(player$xbox_price), main='ACF for Differenced Series')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-11-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-11-1.png>
 
 ``` r
 Pacf(diff(player$xbox_price), main='PACF for Differenced Series')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-11-2.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-11-2.png>
 
 ``` r
 #Fitting an ARIMA model
@@ -143,7 +143,7 @@ fit<-auto.arima(player$xbox_price, seasonal=FALSE)
 tsdisplay(residuals(fit), lag.max=45, main='(3,1,2) Model Residuals')
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-13-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-13-1.png>
 
 ``` r
 
@@ -216,7 +216,7 @@ plot(fcast_no_holdout, main=" ")
 lines(ts(player$xbox_price))
 ```
 
-<img src="Arima_plots/fig-unnamed-chunk-15-1.png" width="672" />
+<img src=https://github.com/valentinadeshko/Time-series-Fifa2017/blob/master/Arima_plots/fig-unnamed-chunk-15-1.png>
 
 Model summary
 
